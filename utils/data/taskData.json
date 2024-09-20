@@ -1,0 +1,51 @@
+{
+"-O7CEqXVq8W_vDk__K_G":
+  {
+    "firebaseKey":"-O7CEqXVq8W_vDk__K_G",
+    "uid":"te9x5emdaRPHOikkFnZqxUGDgr43",
+    "owner":"Felicia Mings",
+    "task":"Finish NSS",
+    "dueDate":"2/16/2025",
+    "complete":false
+  },
+
+"-O7CEqXWEvqTBuMmf47c":
+  {
+    "firebaseKey":"-O7CEqXWEvqTBuMmf47c",
+    "uid":"te9x5emdaRPHOikkFnZqxUGDgr43",
+    "owner":"Felicia Mings",
+    "task":"Complete backend pre-work",
+    "dueDate":"9/25/2024",
+    "complete":true
+  },
+
+"-O7CEqXXaROJ2uQPWLWG":
+  {
+    "firebaseKey":"-O7CEqXXaROJ2uQPWLWG",
+    "uid":"te9x5emdaRPHOikkFnZqxUGDgr43",
+    "owner":"Felicia Mings",
+    "task":"Give Lola a treat",
+    "dueDate":"10/18/2024",
+    "complete":true
+  },
+
+"-O7CEqXYKVpmWQan2NfR":
+  {
+    "firebaseKey":"-O7CEqXYKVpmWQan2NfR",
+    "uid":"te9x5emdaRPHOikkFnZqxUGDgr43",
+    "owner":"Felicia Mings",
+    "task":"Order new clothes",
+    "dueDate":"3/8/2025",
+    "complete":false
+  },
+
+"-O7CEqXYKVpmWQan2NfS":
+  {
+    "firebaseKey":"-O7CEqXYKVpmWQan2NfS",
+    "uid":"te9x5emdaRPHOikkFnZqxUGDgr43",
+    "owner":"Felicia Mings",
+    "task":"Complete a task",
+    "dueDate":"3/30/2025",
+    "complete":false
+  }
+}
