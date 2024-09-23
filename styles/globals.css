@@ -1,4 +1,6 @@
 @import 'bootstrap/dist/css/bootstrap.css';
+@import 'react-datepicker/dist/react-datepicker.css';
+
 
 html,
 body {
