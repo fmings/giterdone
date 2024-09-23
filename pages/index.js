@@ -38,16 +38,20 @@ function Home() {
 
   return (
     <div
-      className="text-center d-flex flex-column justify-content-center align-content-center"
+      className="text-center d-flex flex-column justify-content-center align-content-center page-container"
     >
       <div>
         <img alt="giterdone logo" width="400" src="/giterdone-logo.png" />
       </div>
-      {userTasks.map((userTask) => (
-        <TaskCard userTaskObj={userTask} key={userTask.firebaseKey} onUpdate={getAllUserTasks} />
-      ))}
-      <Button onClick={handleAddTask}><img alt="add task" src="https://cdn-icons-png.flaticon.com/128/992/992651.png" /></Button>
-      { isModalOpen && <AddTaskForm onClose={handleClose} /> }
+      <div className="task-parent-container d-flex flex-column align-items-center">
+        <div className="task-container">
+          {userTasks.map((userTask) => (
+            <TaskCard userTaskObj={userTask} key={userTask.firebaseKey} onUpdate={getAllUserTasks} />
+          ))}
+          <Button className="icon-btn" onClick={handleAddTask}><img className="icon" alt="add task" src="https://cdn-icons-png.flaticon.com/128/992/992651.png" /></Button>
+          { isModalOpen && <AddTaskForm onClose={handleClose} /> }
+        </div>
+      </div>
 
     </div>
   );

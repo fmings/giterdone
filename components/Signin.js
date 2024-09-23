@@ -13,9 +13,10 @@ function Signin() {
         margin: '0 auto',
       }}
     >
-      <h1>Hi there!</h1>
-      <p>Click the button below to login!</p>
-      <Button type="button" size="lg" className="copy-btn" onClick={signIn}>
+      <div>
+        <img alt="giterdone logo" width="400" src="/giterdone-logo.png" />
+      </div>
+      <Button type="button" className="copy-btn sign-in-btn" onClick={signIn}>
         Sign In
       </Button>
     </div>

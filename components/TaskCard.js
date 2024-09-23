@@ -22,21 +22,21 @@ export default function TaskCard({ userTaskObj, onUpdate }) {
     <div>
       <div className="task-list-container">
         <Table>
-          <tbody>
+          <tbody className="ind-tasks">
             <tr>
-              <td>{userTaskObj.complete ? (
-                <Button onClick={toggleCompletedTask}><img alt="checked button" src="https://cdn-icons-png.flaticon.com/128/711/711239.png" /></Button>
-              ) : <Button onClick={toggleCompletedTask}><img alt="checked button" src="https://cdn-icons-png.flaticon.com/128/1442/1442912.png" /></Button>}
+              <td className="check-container">{userTaskObj.complete ? (
+                <Button onClick={toggleCompletedTask} className="icon-btn"><img className="icon" alt="checked button" src="https://cdn-icons-png.flaticon.com/128/711/711239.png" /></Button>
+              ) : <Button className="icon-btn" onClick={toggleCompletedTask}><img className="icon" alt="checked button" src="https://cdn-icons-png.flaticon.com/128/1442/1442912.png" /></Button>}
               </td>
               <td>{userTaskObj.task}</td>
-              <td>
+              <td className="date-container">
                 {new Date(userTaskObj.dueDate).toLocaleDateString('en-US', {
                   year: 'numeric',
                   month: '2-digit',
                   day: '2-digit',
                 })}
               </td>
-              <td><Button onClick={deleteTask}><img alt="delete icon" src="https://cdn-icons-png.flaticon.com/128/484/484662.png" /></Button></td>
+              <td className="trash-container"><Button className="icon-btn" onClick={deleteTask}><img alt="delete icon" className="icon" src="https://cdn-icons-png.flaticon.com/128/484/484662.png" /></Button></td>
             </tr>
           </tbody>
         </Table>
