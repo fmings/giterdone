@@ -29,7 +29,13 @@ export default function TaskCard({ userTaskObj, onUpdate }) {
               ) : <Button onClick={toggleCompletedTask}><img alt="checked button" src="https://cdn-icons-png.flaticon.com/128/1442/1442912.png" /></Button>}
               </td>
               <td>{userTaskObj.task}</td>
-              <td>{userTaskObj.dueDate}</td>
+              <td>
+                {new Date(userTaskObj.dueDate).toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: '2-digit',
+                  day: '2-digit',
+                })}
+              </td>
               <td><Button onClick={deleteTask}><img alt="delete icon" src="https://cdn-icons-png.flaticon.com/128/484/484662.png" /></Button></td>
             </tr>
           </tbody>
