@@ -20,10 +20,9 @@ function Home() {
     setIsModalOpen(true);
   };
 
-  // NEED TO DEBUG DATE/SORT THROUGH FIREBASE
   const getAllUserTasks = () => {
     getUserTasks(user.uid).then((tasks) => {
-      const sortedTasks = tasks.sort((a, b) => new Date(b.dueDate) - new Date(a.dueDate));
+      const sortedTasks = tasks.sort((a, b) => new Date(a.dueDate) - new Date(b.dueDate));
       setUserTasks(sortedTasks);
     });
   };
