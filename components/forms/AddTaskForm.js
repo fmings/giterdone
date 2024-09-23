@@ -73,7 +73,7 @@ export default function AddTaskForm({ onClose }) {
           </FloatingLabel>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="primary" onClick={handleClose}>OK</Button>
+          <Button className="submit-btn" onClick={handleClose}>Add</Button>
         </Modal.Footer>
       </Modal>
     </div>
