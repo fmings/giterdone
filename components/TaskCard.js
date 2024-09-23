@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Table } from 'react-bootstrap';
 import PropTypes from 'prop-types';
-import { updateTask } from '../api/taskData';
+import { deleteSingleTask, updateTask } from '../api/taskData';
 
 export default function TaskCard({ userTaskObj, onUpdate }) {
   const toggleCompletedTask = () => {
@@ -9,6 +9,12 @@ export default function TaskCard({ userTaskObj, onUpdate }) {
       updateTask({ ...userTaskObj, complete: false }).then(() => onUpdate());
     } else {
       updateTask({ ...userTaskObj, complete: true }).then(() => onUpdate());
+    }
+  };
+
+  const deleteTask = () => {
+    if (window.confirm(`Are you sure you want to delete this task? Task: ${userTaskObj.task}`)) {
+      deleteSingleTask(userTaskObj.firebaseKey).then(() => onUpdate());
     }
   };
 
@@ -24,6 +30,7 @@ export default function TaskCard({ userTaskObj, onUpdate }) {
               </td>
               <td>{userTaskObj.task}</td>
               <td>{userTaskObj.dueDate}</td>
+              <td><Button onClick={deleteTask}><img alt="delete icon" src="https://cdn-icons-png.flaticon.com/128/484/484662.png" /></Button></td>
             </tr>
           </tbody>
         </Table>
@@ -37,6 +44,7 @@ TaskCard.propTypes = {
     dueDate: PropTypes.string,
     task: PropTypes.string,
     complete: PropTypes.bool,
+    firebaseKey: PropTypes.string,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,
 };
