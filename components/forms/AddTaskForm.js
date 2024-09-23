@@ -4,6 +4,7 @@ import {
 } from 'react-bootstrap';
 import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import DatePicker from 'react-datepicker';
 import { useAuth } from '../../utils/context/authContext';
 import { createTask, updateTask } from '../../api/taskData';
